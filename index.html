@@ -37,9 +37,6 @@
         --radius: 22px;
       }
 
-      * {
-        box-sizing: border-box;
-      }
       html,
       body {
         height: 100%;
@@ -92,12 +89,6 @@
         }
       }
 
-      /* @media (min-width: 1024px) {
-        .landing::before {
-          
-        }
-      } */
-
       /* vignette */
       .landing::after {
         content: "";
@@ -147,21 +138,6 @@
         text-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
       }
 
-      /* .landing-small {
-        font-family: Inter, system-ui, sans-serif;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-        font-size: clamp(14px, 2.8vw, 18px);
-        opacity: 0.95;
-      }
-
-      .landing-big {
-        font-family: "Playfair Display", serif;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        font-size: clamp(28px, 5vw, 40px);
-      } */
-
       /* names big script */
       .landing-names {
         margin: 0 !important;
@@ -171,7 +147,6 @@
         line-height: 0.9 !important;
         letter-spacing: 0 !important;
         text-shadow: 0 18px 50px rgba(0, 0, 0, 0.45) !important;
-        /* transform: rotate(-2.5deg) !important; */
       }
 
       /* HP kecil */
@@ -817,7 +792,7 @@
       .music {
         position: fixed;
         right: 14px;
-        bottom: 14px;
+        bottom: 10%;
         z-index: 8888;
         display: none;
       }
@@ -1145,17 +1120,11 @@
         margin: 0.5rem;
       }
 
-      html,
+      /* html,
       body {
         overflow-x: hidden;
         width: 100%;
-      }
-
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
+      } */
     </style>
   </head>
 
@@ -1316,7 +1285,7 @@
         <section class="panel" style="--panel-bg: url('/src/img/cover.jpeg')">
           <!-- AKAD (green block) -->
           <div class="green">
-            <div class="landing-small" style="font-weight: bold">Akad Nikah</div>
+            <div class="landing-big" style="font-weight: bold">Akad Nikah</div>
 
             <div class="dategrid">
               <div class="col">Jum’at</div>
@@ -1339,7 +1308,7 @@
             <div style="padding-top: 15px; border-bottom: solid;"></div>
             <!-- RESEPSI (green block) -->
             <span class="orn-dove r"></span>
-            <div class="landing-small" style="font-weight: bold; margin-top: 20px">Resepsi</div>
+            <div class="landing-big" style="font-weight: bold; margin-top: 20px">Resepsi</div>
 
             <div class="dategrid">
               <div class="col">Jum’at</div>
@@ -1461,7 +1430,7 @@
           <div style="padding-bottom: 50px"></div>
 
           <div class="green" style="border-radius: 230px 230px 0 0">
-            <div class="landing-small" style="margin: 0; padding-top: 25px; font-weight: bold">
+            <div class="landing-big" style="margin: 0; padding-top: 25px; font-weight: bold; font-size: 22px;">
               Wedding Gift
             </div>
             <p style="font-size: 13px; margin: 13px 9px;">
@@ -1525,7 +1494,7 @@
             </div>
 
             <div id="wishesPanel">
-              <div class="landing-small" style="font-weight: bold">
+              <div class="landing-big" style="font-weight: bold; font-size: 22px; padding-bottom: 5px;">
                 Berikan <br />
                 Ucapan &amp; Doa
               </div>
@@ -1636,7 +1605,7 @@
                           ></a>
                         </li>
                         <li>
-                          <a href="https://wa.me/62 87869978877" target="_blank"
+                          <a href="https://wa.me/+62 87869978877" target="_blank"
                             ><i class="fa-brands fa-whatsapp"></i
                           ></a>
                         </li>
