@@ -1361,47 +1361,6 @@
               Buka Lokasi
             </button>
           </div>
-
-          <!-- <div style="height: 20px"></div>
-
-          <div class="section-title">RSVP</div>
-          <div class="center-text">
-            Bagi tamu undangan yang akan hadir di acara pernikahan kami silahkan
-            kirimkan konfirmasi kehadiran dengan mengisi form berikut:
-          </div>
-
-          (opsional) form RSVP kamu yang lama boleh dipakai
-          <form class="rsvp" id="rsvpForm" style="margin-top: 14px">
-            <div>
-              <label>Nama</label>
-              <input name="name" placeholder="Nama Anda" required />
-            </div>
-            <div>
-              <label>Konfirmasi</label>
-              <select name="status" required>
-                <option value="" selected disabled>Pilih</option>
-                <option>Hadir</option>
-                <option>Tidak Hadir</option>
-              </select>
-            </div>
-            <div>
-              <label>Jumlah Tamu</label>
-              <select name="count" required>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-              </select>
-            </div>
-            <button class="btn btn-primary btn-wide" type="submit">
-              Kirim RSVP
-            </button>
-            <div
-              id="rsvpMsg"
-              style="font-size: 12px; color: #4a4a4a; display: none"></div>
-          </form>
-
-          <div style="height: 24px"></div> -->
         </section>
 
         <!-- PANEL 4: GALLERY GRID -->
@@ -1550,15 +1509,16 @@
                   <span id="commentCount">0</span> Comments
                 </div>
 
-                <form class="w-form" id="commentForm">
-                  <input id="cName" type="text" placeholder="Nama" required />
+                <form class="w-form" id="wishForm">
+                  <input id="cName" name="name" type="text" placeholder="Nama" required />
                   <textarea
                     id="cText"
+                    name="wish"
                     rows="4"
                     placeholder="Ucapan"
                     required></textarea>
 
-                  <select id="cAttend" required>
+                  <select id="cAttend" name="attendance" required>
                     <option value="" disabled selected>
                       Konfirmasi Kehadiran
                     </option>
@@ -1586,37 +1546,9 @@
                   <input type="hidden" id="editId" value="" />
                 </form>
 
-                <div class="w-divider"></div>
-
-                <div id="commentList" class="w-list"></div>
+                <div id="wishList" class="w-list"></div>
               </div>
             </div>
-
-            <div class="script-title" style="margin: 0; padding-top: 25px">
-              Wishes
-            </div>
-
-            <div style="margin-bottom: 12px">
-              Ucapkan Selamat &amp; Do’a Restu kepada kedua mempelai untuk hari
-              bahagia mereka melalui kolom berikut:
-            </div>
-
-            <form class="rsvp" id="wishForm">
-              <div>
-                <label>Nama</label>
-                <input name="name" placeholder="Nama Anda" required />
-              </div>
-              <div>
-                <label>Ucapan</label>
-                <textarea
-                  name="wish"
-                  placeholder="Tulis ucapan terbaik..."
-                  required></textarea>
-              </div>
-              <button class="btn btn-primary btn-wide" type="submit">
-                Kirim Ucapan
-              </button>
-            </form>
 
             <div style="height: 16px"></div>
             <div id="wishList" style="display: grid"></div>
@@ -1816,7 +1748,7 @@
           background:rgba(255,255,255,.72); text-align: left;
         ">
           <div style="font-weight:700; font-size:13px; margin-bottom:6px; color:#173a2b">${escapeHtml(
-            w.name
+            w.name + " (" + w.attendance + ")"
           )}</div>
           <div style="font-size:12.5px; line-height:1.5; color:#333">${escapeHtml(
             w.wish
