@@ -118,7 +118,6 @@
       /* top texts */
       .landing-top {
         padding: 6px 0 20px;
-        
       }
       .landing-small {
         font-family: Inter, system-ui, sans-serif;
@@ -390,6 +389,7 @@
       /* center the invitation column */
       .app {
         min-height: 100svh;
+        overflow: hidden;
         display: flex;
         justify-content: center;
       }
@@ -1510,7 +1510,12 @@
                 </div>
 
                 <form class="w-form" id="wishForm">
-                  <input id="cName" name="name" type="text" placeholder="Nama" required />
+                  <input
+                    id="cName"
+                    name="name"
+                    type="text"
+                    placeholder="Nama"
+                    required />
                   <textarea
                     id="cText"
                     name="wish"
